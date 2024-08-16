@@ -8,3 +8,6 @@ octave
 wireshark
 zsh/tokens.zsh
 .DS_Store
+neofetch
+zsh/spaceship.zsh.zwc
+ranger
