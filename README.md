@@ -1,11 +1,15 @@
 # I USE
-- zsh (with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) & spaceship)
-- tmux (with oh-my-tmux)
-- nvim (with lazyVim)
+- zsh (with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) & [spaceship](https://github.com/spaceship-prompt/spaceship-prompt))
+- tmux (with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) )
+- nvim (with [lazyvim](https://github.com/LazyVim/LazyVim))
 - ranger
 
 
 # Brief Introduction
+<img width="793" alt="iTerm2 2024-08-16 17 43 18" src="https://github.com/user-attachments/assets/11c9441c-10df-4239-afc5-0b546e3a7f17">
+
+<img width="1027" alt="image" src="https://github.com/user-attachments/assets/61d1b735-2ce5-4eef-8443-fc6d6d8d96a0">
+
 
 ## zsh
 <font color='orange'>zsh</font> is a command-line interpreter shell for Unix-based systems such as Linux and macOS, it's an alternative to default shell-Bash, provide powerful plugins. 
@@ -34,12 +38,8 @@
 
 [lazyvim](https://github.com/LazyVim/LazyVim)
 
-
-## ranger
-
-not much to say about ranger, cuz I just use the defaults.
-
 /divider
+
 ### other infos
 
 this repository is located at `$HOME`
