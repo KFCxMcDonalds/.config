@@ -35,7 +35,7 @@
 
 **<font color="#02B1D2">[LazyVim](https://github.com/LazyVim/LazyVim)</font>** is a configuration of nvim with lazy.nvim as the package manager.
 
-==========================================================================================
+==============================================================================
 
 ### other infos
 
