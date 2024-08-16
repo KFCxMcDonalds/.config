@@ -6,39 +6,36 @@
 
 
 # Brief Introduction
-<img width="793" alt="iTerm2 2024-08-16 17 43 18" src="https://github.com/user-attachments/assets/11c9441c-10df-4239-afc5-0b546e3a7f17">
+<img width="600" alt="iTerm2 2024-08-16 17 43 18" src="https://github.com/user-attachments/assets/11c9441c-10df-4239-afc5-0b546e3a7f17">
 
-<img width="1027" alt="image" src="https://github.com/user-attachments/assets/61d1b735-2ce5-4eef-8443-fc6d6d8d96a0">
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/2e969a12-165b-4d14-8fdd-ddf77ec3b5dc">
+
+
+
 
 
 ## zsh
-<font color='orange'>zsh</font> is a command-line interpreter shell for Unix-based systems such as Linux and macOS, it's an alternative to default shell-Bash, provide powerful plugins. 
+**<font color='orange'>zsh</font>** is a command-line interpreter shell for Unix-based systems such as Linux and macOS, it's an alternative to default shell-Bash, provide powerful plugins. 
 
-<font color="orange">oh-my-zsh</font> is an out-of-the-box configuration of zsh, including some plugins and shortcuts, details can be check on bellow link:
+**<font color="orange">[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)</font>** is an out-of-the-box configuration of zsh, including some plugins and shortcuts.
 
-[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) 
+**<font color="orange">[spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)</font>** is a customizable Zsh prompt, with this I can see useful infos when working with terminal.
 
-<font color="orange">spaceship-prompt</font> is a customizable Zsh prompt, with this I can see useful infos when working with terminal.
 
-[spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ## tmux
 
-<font color='78D64B'>tmux</font> is a terminal multiplexer that enables multiple terminals on a single screen. It's great power lies on it's vim-like style, it's powerful shortcuts allow users work on multiple terminals without moving their fingers away from keyboard.
+**<font color='78D64B'>tmux</font>** is a terminal multiplexer that enables multiple terminals on a single screen. It's great power lies on it's vim-like style, it's powerful shortcuts allow users work on multiple terminals without moving their fingers away from keyboard.
 
-<font color='78D64B'>oh-my-tmux</font> is a pretty&versatile tmux configuration.
-
-[oh-my-tmux](https://github.com/gpakosz/.tmux)
+**<font color='78D64B'>[oh-my-tmux](https://github.com/gpakosz/.tmux)</font>** is a pretty&versatile tmux configuration.
 
 ## nvim
 
-<font color="#02B1D2">nvim(neovim)</font> is a vim-fork editor. 
+**<font color="#02B1D2">nvim(neovim)</font>** is a vim-fork editor. 
 
-<font color="#02B1D2">lazyVim</font> is a configuration of nvim with lazy.nvim as the package manager.
+**<font color="#02B1D2">[LazyVim](https://github.com/LazyVim/LazyVim)</font>** is a configuration of nvim with lazy.nvim as the package manager.
 
-[lazyvim](https://github.com/LazyVim/LazyVim)
-
-/divider
+==========================================================================================
 
 ### other infos
 
