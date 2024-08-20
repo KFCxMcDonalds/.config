@@ -53,3 +53,4 @@ keymap.set(mode_n, "<F10>", "<cmd>lua require'dap'.run_last()<cr>", {desc = "deb
 -- smoji
 keymap.set(mode_n, "<Leader><Leader>te", "<CMD>Telescope emoji<CR>", {desc = "Telescope emoji"})
 keymap.set(mode_n, "<Leader><Leader>e", "<CMD>InsertEmoji<CR>", {desc = "insert emoji"})
+

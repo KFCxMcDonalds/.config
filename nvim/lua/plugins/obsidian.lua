@@ -14,6 +14,9 @@ return {
     -- Required.
     "nvim-lua/plenary.nvim",
   },
+  keys = {
+    {"<CR>", false},
+  },
   opts = {
     dir = "~/Files/Notes",
     disable_frontmatter = true,

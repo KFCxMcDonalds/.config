@@ -13,7 +13,7 @@ alias ls='lsd'
 alias t='tmux'
 alias l='lsd -a'
 alias c='clear'
-alias sz='source ~/.zshrc'
+alias ss='source ~/.zshrc'
 # c++
 alias g++='g++ -std=c++11'
 alias clang++='clang++ -std=c++11'
@@ -27,4 +27,8 @@ alias proxy_off="unset http_proxy https_proxy all_proxy"
 
 # git
 alias lg='lazygit'
+
+
+# yabai & sketchybar
+alias yr='yabai --restart-service'
 
