@@ -9,17 +9,17 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- -- add gruvbox
-  -- { "ellisonleao/gruvbox.nvim" },
-  --
-  -- -- Configure LazyVim to load gruvbox
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "gruvbox",
-  --   },
-  -- },
-  --
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
+
+  -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
+
   -- change trouble config
   {
     "folke/trouble.nvim",
@@ -83,17 +83,6 @@ return {
     },
   },
 
-  -- change LSP keymaps
-  {
-    "neovim/nvim-lspconfig",
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- disable a keymap
-      keys[#keys + 1] = { "K", false }
-      -- change a keymap
-      keys[#keys + 1] = { "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", { desc = "hover", buffer = 0 } }
-    end,
-  },
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",

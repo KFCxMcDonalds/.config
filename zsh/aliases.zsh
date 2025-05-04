@@ -27,8 +27,23 @@ alias proxy_off="unset http_proxy https_proxy all_proxy"
 
 # git
 alias lg='lazygit'
+alias ld='lazydocker'
 
 
 # yabai & sketchybar
 alias yr='yabai --restart-service'
 
+
+# services
+alias frpc-boot='sudo launchctl bootstrap system /Library/LaunchDaemons/com.frp.frpc.plist'
+alias frpc-bootout='sudo launchctl bootout system /Library/LaunchDaemons/com.frp.frpc.plist'
+alias frpc-start='sudo launchctl load /Library/LaunchDaemons/com.frp.frpc.plist'
+alias frpc-stop='sudo launchctl unload /Library/LaunchDaemons/com.frp.frpc.plist'
+alias frpc-restart='sudo launchctl kickstart -k system/com.frp.frpc.plist'
+alias frpc-status='sudo launchctl list | grep frpc'
+
+# go
+alias gom="go mod"
+
+# k8s
+alias kc='kubectl'

@@ -1,3 +1,8 @@
+# -- my cnfigs --
+set -g mouse on
+
+
+
 # -- session creation ----------------------------------------------------------
 
 # prompt for session name when creating a new session, possible values are:
@@ -35,7 +40,6 @@ tmux_conf_new_pane_reconnect_ssh=false
 
 
 # -- display -------------------------------------------------------------------
-
 # RGB 24-bit colour support, possible values are:
 #   - true
 #   - false
@@ -45,7 +49,8 @@ tmux_conf_new_pane_reconnect_ssh=false
 # to 'truecolor' or '24bit' or '$ tput colors' answering '16777216'
 # see https://github.com/termstandard/colors
 tmux_conf_24b_colour=auto
-
+set-option -g default-terminal "screen-256color"
+set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # -- theming -------------------------------------------------------------------
 

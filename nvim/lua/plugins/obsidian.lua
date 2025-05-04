@@ -14,9 +14,6 @@ return {
     -- Required.
     "nvim-lua/plenary.nvim",
   },
-  keys = {
-    {"<CR>", false},
-  },
   opts = {
     dir = "~/Files/Notes",
     disable_frontmatter = true,
@@ -29,6 +26,7 @@ return {
     wiki_link_func = "use_path_only",
     templates = {
       subdir = "1_Templates"
-    }
+    },
+    mappings = {},
   },
 }

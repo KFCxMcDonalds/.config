@@ -1,22 +1,24 @@
 return {
-    -- -- lucario
-    -- { "raphamorim/lucario" };
-    --
-    -- {
-    --     "LazyVim/LazyVim",
-    --     opts = {
-    --         colorscheme = "lucario",
-    --     }
-    -- }
-    
-    -- One Dark
-    {"joshdick/onedark.vim"},
+  -- -- lucario
+  -- { "raphamorim/lucario" };
+  --
 
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "onedark",
-        }
+  -- One Dark
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    config = function()
+      require("onedark").setup({
+        style = "warm",
+      })
+    end,
+  },
 
-    }
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "onedark",
+    },
+  },
+
 }

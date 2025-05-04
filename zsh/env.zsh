@@ -3,6 +3,8 @@ source ~/.config/zsh/tokens.zsh
 
 # PATH
 export TERM='xterm-256color'
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home
 
@@ -35,4 +37,15 @@ PATH=$PATH:/usr/local/mysql/bin
 export SPACESHIP_CONFIG="$HOME/.config/zsh/spaceship.zsh"
 # <<< spaceship setup <<<
 
+# homebrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
+# GO
+export GOPATH="$HOME/go/"
+export PATH=$PATH:$GOPATH/bin
+
+# docker
+export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin
+
+# trash-cli
+export PATH=$PATH:/usr/local/opt/trash-cli/bin

@@ -13,7 +13,8 @@ zen_on() {
              --set brew drawing=off \
              --set volume drawing=off \
              --set github.bell drawing=off \
-             --set media drawing=off
+             --set media drawing=off \
+             --set battery drawing=off
 }
 
 zen_off() {
