@@ -39,7 +39,7 @@ yabai -m config window-topmost               on
 # -------------
 # --- rules ---
 # -------------
-otherApp='^(系统设置|Calender|ToDesk|Tencent Lemon|微信|Follow|iTerm2|Ghostty|Docker|WeChat|QQ|访达|System Preferences|HP Smart|Duet|Microsoft Outlook|滴答清单|Discord|Slack|音乐|Eudic|欧路词典|Feishu|腾讯会议|TencentMeeting)$'
+otherApp='^(系统设置|Alfred Preferences|Calender|ToDesk|Tencent Lemon|微信|Follow|iTerm2|Ghostty|Docker|WeChat|QQ|访达|System Preferences|HP Smart|Duet|Microsoft Outlook|滴答清单|Discord|Slack|音乐|Eudic|欧路词典|Feishu|腾讯会议|TencentMeeting)$'
 
 yabai -m rule --add \
     app=".*" \

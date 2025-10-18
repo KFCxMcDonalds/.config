@@ -21,3 +21,4 @@ opt.listchars = {
   precedes = "‹",
 }
 
+opt.conceallevel = 2

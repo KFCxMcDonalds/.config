@@ -30,3 +30,27 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "html"
   end,
 })
+
+-- go doc
+vim.api.nvim_create_user_command('GoDoc', function(opts)
+  -- 执行命令并捕获输出
+  local output = vim.fn.system('go doc ' .. opts.args)
+  
+  -- 创建新的分割窗口
+  vim.cmd('20new') -- 或用 'new' 水平分割
+  
+  -- 设置缓冲区选项
+  vim.bo.buftype = 'nofile'
+  vim.bo.bufhidden = 'wipe'
+  vim.bo.swapfile = false
+  vim.bo.filetype = 'godoc'
+  
+  -- 插入输出内容
+  local lines = vim.split(output, '\n')
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+  
+  -- 设置为只读
+  vim.bo.modifiable = false
+  vim.bo.readonly = true
+end, { nargs = 1, complete = 'file', desc = 'Show go doc in buffer' })
+

@@ -20,6 +20,7 @@ keymap.del(mode_niv, "<A-k>")
 
 -- keymaps --
 -- vim-builtin
+keymap.set(mode_iv, ";;", "<Esc>", { desc = 'esc', remap = false})
 keymap.set(mode_n, "zz", "za", { desc = 'Toggle fold under cursor', remap = false})
 keymap.set(mode_n, "za", "zz", { desc = 'Center this line', remap = false})
 -- buffer

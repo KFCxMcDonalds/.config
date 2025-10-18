@@ -1,0 +1,17 @@
+# font-family = "Maple Mono Normal NL NF CN"
+font-family = "Google Sans Code"
+
+# 强制中文使用 Maple Mono
+font-codepoint-map = U+4E00-U+9FFF=LXGW WenKai Mono
+font-codepoint-map = U+3400-U+4DBF=LXGW WenKai Mono
+font-codepoint-map = U+3000-U+303F=LXGW WenKai Mono
+font-codepoint-map = U+FF00-U+FFEF=LXGW WenKai Mono
+
+macos-titlebar-style = hidden
+window-decoration = false
+
+window-padding-balance = true
+window-padding-x = 2,0
+window-padding-y = 2,0
+
+cursor-click-to-move = true

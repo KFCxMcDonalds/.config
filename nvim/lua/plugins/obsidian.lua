@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",  -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = "markdown",
@@ -15,7 +15,7 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    dir = "~/Files/Notes",
+    dir = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes",
     disable_frontmatter = true,
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
@@ -28,5 +28,6 @@ return {
       subdir = "1_Templates"
     },
     mappings = {},
+    legacy_commands = false,
   },
 }
