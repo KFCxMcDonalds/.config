@@ -14,6 +14,7 @@ alias t='tmux'
 alias l='lsd -a'
 alias c='clear'
 alias ss='source ~/.zshrc'
+alias h="cd ~"
 # c++
 alias g++='g++ -std=c++11'
 alias clang++='clang++ -std=c++11'
@@ -47,3 +48,6 @@ alias gom="go mod"
 
 # k8s
 alias kc='kubectl'
+
+# obsidian
+alias note='vim ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes'

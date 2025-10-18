@@ -33,10 +33,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 PATH=$PATH:/usr/local/mysql/bin
 # <<< mysql setup <<<
 
-# >>> spaceship setup >>> 
-export SPACESHIP_CONFIG="$HOME/.config/zsh/spaceship.zsh"
-# <<< spaceship setup <<<
-
 # homebrew
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
@@ -49,3 +45,6 @@ export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin
 
 # trash-cli
 export PATH=$PATH:/usr/local/opt/trash-cli/bin
+
+# yazi
+export YAZI_CONFIG_HOME="$HOME/.config/yazi"
