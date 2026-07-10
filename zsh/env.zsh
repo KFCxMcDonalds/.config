@@ -25,9 +25,20 @@ unset __conda_setup
 
 # >>> virtualenv >>>
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.10  # python3.10
-source /usr/local/bin/virtualenvwrapper.sh
-# <<< virtualenv <<< 
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.10
+# Lazy-load virtualenvwrapper: only loads on first use
+_venv_lazy_load() {
+    unset -f workon mkvirtualenv rmvirtualenv lsvirtualenv cpvirtualenv allvirtualenv
+    source /usr/local/bin/virtualenvwrapper.sh
+    "$@"
+}
+workon()        { _venv_lazy_load workon        "$@" }
+mkvirtualenv()  { _venv_lazy_load mkvirtualenv  "$@" }
+rmvirtualenv()  { _venv_lazy_load rmvirtualenv  "$@" }
+lsvirtualenv()  { _venv_lazy_load lsvirtualenv  "$@" }
+cpvirtualenv()  { _venv_lazy_load cpvirtualenv  "$@" }
+allvirtualenv() { _venv_lazy_load allvirtualenv "$@" }
+# <<< virtualenv <<<
 
 # >>> mysql setup >>> 
 PATH=$PATH:/usr/local/mysql/bin
@@ -48,3 +59,6 @@ export PATH=$PATH:/usr/local/opt/trash-cli/bin
 
 # yazi
 export YAZI_CONFIG_HOME="$HOME/.config/yazi"
+
+# claude code
+export PATH=$PATH:$HOME/.local/bin

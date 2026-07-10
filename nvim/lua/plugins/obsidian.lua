@@ -27,7 +27,6 @@ return {
     templates = {
       subdir = "1_Templates"
     },
-    mappings = {},
     legacy_commands = false,
   },
 }

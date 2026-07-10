@@ -1,14 +1,20 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/icons.sh"
-
 wifi=(
-  padding_right=7
-  label.width=0
-  icon="$WIFI_DISCONNECTED"
-  script="$PLUGIN_DIR/wifi.sh"
+    script="$PLUGIN_DIR/wifi.sh"
+    icon=$WIFI_CONNECTED
+    label.drawing=off
+    background.color="$PURE_BLACK"
+    icon.align=center
+    icon.padding_left=8
+    icon.padding_right=8
+    padding_left=0
+    padding_right=0
+    background.drawing=off
+    #icon.color=0xff58d1fc
+    update_freq=10
 )
 
 sketchybar --add item wifi right \
            --set wifi "${wifi[@]}" \
-           --subscribe wifi wifi_change mouse.clicked
+           click_script="open x-apple.systempreferences:com.apple.preference.network"

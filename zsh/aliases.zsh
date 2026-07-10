@@ -3,6 +3,7 @@ alias zshconfig="vim ~/.zshrc"
 alias aliasconfig="vim ~/.config/zsh/aliases.zsh"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias spaceshipconfig="vim ~/.config/zsh/spaceship.zsh"
+alias proxyconfig="vim /Users/liwenwu/.config/clash/config.yaml"
 
 # python
 # alias python="/usr/bin/python3"  # default python
@@ -51,3 +52,10 @@ alias kc='kubectl'
 
 # obsidian
 alias note='vim ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes'
+
+# EvoSci
+alias evosci="EvoSci"
+
+# calude
+alias cc="claude --allow-dangerously-skip-permissions"
+alias ccd="claude --allow-dangerously-skip-permissions --channels plugin:discord@claude-plugins-official"

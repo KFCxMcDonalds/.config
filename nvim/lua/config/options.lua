@@ -9,6 +9,7 @@ opt.softtabstop = 4
 opt.shiftwidth = 4 -- <</>> length
 
 opt.termguicolors = true
+opt.wrap = true
 
 -- edit
 opt.spell = false
@@ -22,3 +23,5 @@ opt.listchars = {
 }
 
 opt.conceallevel = 2
+
+vim.g.maplocalleader = ","

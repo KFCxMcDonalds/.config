@@ -22,7 +22,6 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-
 -- filetype
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.tmpl",
@@ -54,3 +53,22 @@ vim.api.nvim_create_user_command('GoDoc', function(opts)
   vim.bo.readonly = true
 end, { nargs = 1, complete = 'file', desc = 'Show go doc in buffer' })
 
+
+-- neorg
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "norg", "neorg" },
+  callback = function()
+    if pcall(vim.treesitter.start) then
+      vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
+  end,
+})
+
+-- formatconfig
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "r", "o" })
+  end,
+})

@@ -1,5 +1,6 @@
 return {
   "allaman/emoji.nvim",
+  optional = true,
   version = "1.0.0",
   dependencies = {
     "nvim-lua/plenary.nvim",

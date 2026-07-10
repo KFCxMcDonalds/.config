@@ -4,15 +4,21 @@ return {
   --
 
   -- One Dark
-  {
-    "navarasu/onedark.nvim",
-    lazy = false,
-    config = function()
-      require("onedark").setup({
-        style = "warm",
-      })
-    end,
-  },
+  -- {
+  --   "navarasu/onedark.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("onedark").setup({
+  --       style = "warm",
+  --     })
+  --   end,
+  -- },
+
+  -- {"blazkowolf/gruber-darker.nvim"},
+
+  {"joshdick/onedark.vim"},
+
+  -- {"rebelot/kanagawa.nvim"},
 
   {
     "LazyVim/LazyVim",

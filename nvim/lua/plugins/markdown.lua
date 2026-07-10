@@ -11,14 +11,14 @@ return {
         vim.g.mkdp_markdown_css = '/Users/liwenwu/Library/Mobile Documents/iCloud~md~obsidian/Notes/.obsidian/img_center.css'
     end,
   },
-  {
-    "OXY2DEV/markview.nvim",
-    opts = {
-      markdown = {
-        list_items = {
-          shift_width = 2,
-        },
-      },
-    },
-  }
+  -- {
+  --   "OXY2DEV/markview.nvim",
+  --   opts = {
+  --     markdown = {
+  --       list_items = {
+  --         shift_width = 2,
+  --       },
+  --     },
+  --   },
+  -- }
 }

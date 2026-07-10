@@ -13,6 +13,7 @@ local mode_iv = {"i", "v"}
 local mode_i = { "i" }
 local mode_n = { "n" }
 local mode_v = { "v" }
+local mode_t = { "t" }
 
 -- unbinds --
 keymap.del(mode_niv, "<A-j>")
@@ -21,8 +22,10 @@ keymap.del(mode_niv, "<A-k>")
 -- keymaps --
 -- vim-builtin
 keymap.set(mode_iv, ";;", "<Esc>", { desc = 'esc', remap = false})
+keymap.set(mode_t, ";;", "<C-\\><C-n>:close<CR>", { desc = 'exit terminal mode and close window', remap = false})
 keymap.set(mode_n, "zz", "za", { desc = 'Toggle fold under cursor', remap = false})
 keymap.set(mode_n, "za", "zz", { desc = 'Center this line', remap = false})
+keymap.set('x', 'p', '"_dP', { desc = 'paste without changing register' })
 -- buffer
 keymap.set(mode_n, "<leader>b>", "<cmd>BufferLineMoveNext<cr>", {desc = "move buffer to the right"})
 keymap.set(mode_n, "<leader>b<", "<cmd>BufferLineMovePrev<cr>", {desc = "move buffer to the left"})
@@ -39,12 +42,10 @@ keymap.set(mode_ni, "<Esc>", "<Esc>:silent !im-select com.apple.keylayout.ABC<cr
 keymap.set(mode_n, "<leader>mp", ":silent !osascript /Users/liwenwu/.config/nvim/scripts/mkdp_windowSplit.applescript<cr>:MarkdownPreview<cr>", { desc = "markdown preview", remap = true, silent = true})
 
 -- obsidian
-keymap.set(mode_n, "<leader>oo", "<cmd>ObsidianOpen<cr>", {desc = "ob: open current buffer", remap = true, silent = true})
-keymap.set(mode_n, "<leader>os", "<cmd>ObsidianQuickSwitch<cr>", {desc = "ob: quick switch", remap = true, silent = true})
-keymap.set(mode_n, "<leader>oS", "<cmd>ObsidianSearch<cr>", {desc = "ob: search", remap = true, silent = true})
-keymap.set(mode_n, "<leader>ot", "<cmd>ObsidianToday<cr>", {desc = "ob: today", remap = true, silent = true})
-
-keymap.set(mode_n, "<leader>of", "<cmd>e ~/Files/Notes/<cr>", {desc = "ob: open folder", remap = true, silent = true})
+keymap.set(mode_n, "<leader>oo", "<cmd>Obsidian open<cr>", {desc = "ob: open current buffer", remap = true, silent = true})
+keymap.set(mode_n, "<leader>os", "<cmd>Obsidian quick_switch<cr>", {desc = "ob: quick switch", remap = true, silent = true})
+keymap.set(mode_n, "<leader>oS", "<cmd>Obsidian search<cr>", {desc = "ob: search", remap = true, silent = true})
+keymap.set(mode_n, "<leader>ot", "<cmd>Obsidian today<cr>", {desc = "ob: today", remap = true, silent = true})
 
 -- snips: see plugins/luaSnips_config.lua
 keymap.set(mode_iv, "<C-u>", "<cmd>lua require('luasnip.extras.select_choice')()<cr>", { desc = "toggle selections of current snip", remap = true, silent = true})
@@ -74,4 +75,37 @@ keymap.set(mode_n, "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", {desc = "lspsa
 keymap.set(mode_n, "<leader>k", "<cmd>Lspsaga hover_doc ++keep<cr>", {desc = "lspsaga: doc ++keep"})
 keymap.set(mode_n, "<leader>h", "<cmd>Lspsaga hover_doc<cr>", {desc = "lspsaga: hover doc"})
 
+-- file
+-- 复制文件名（不含路径）
+keymap.set("n", "<leader>fn", function()
+  vim.fn.setreg("+", vim.fn.expand("%:t"))
+  vim.notify("Copied filename: " .. vim.fn.expand("%:t"))
+end, { desc = "Copy filename" })
+-- 复制相对路径
+keymap.set("n", "<leader>fp", function()
+  vim.fn.setreg("+", vim.fn.expand("%"))
+  vim.notify("Copied relative path: " .. vim.fn.expand("%"))
+end, { desc = "Copy relative path" })
+-- 复制绝对路径
+keymap.set("n", "<leader>fP", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+  vim.notify("Copied absolute path: " .. vim.fn.expand("%:p"))
+end, { desc = "Copy absolute path" })
 
+-- neorg
+keymap.set(mode_n, "<localleader><space>", "<Plug>(neorg.qol.todo-items.todo.task-cycle)")
+
+-- user-command
+vim.keymap.set('v', '<leader>wc', function()
+  -- 用寄存器获取选中文本，兼容所有版本
+  vim.cmd('noau normal! "vy"')
+  local text = vim.fn.getreg('v')
+
+  local en = 0
+  for _ in text:gmatch('[%a]+') do en = en + 1 end
+
+  local zh = 0
+  for _ in text:gmatch('[\xE4-\xE9][\x80-\xBF][\x80-\xBF]') do zh = zh + 1 end
+
+  vim.notify(string.format('英文单词: %d  |  中文字符: %d  |  合计: %d', en, zh, en + zh))
+end, { desc = 'Count EN words and ZH characters in selection' })

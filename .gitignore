@@ -11,3 +11,6 @@ zsh/tokens.zsh
 neofetch
 zsh/spaceship.zsh.zwc
 ranger
+.claude/logs
+PDFMathTranslate
+nvim/.claude/logs
